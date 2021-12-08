@@ -1,15 +1,89 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>Document</title>
+  <style>
+    body {
+      background: #222;
+      width: 100%;
+
+    }
+
+    .button-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    button {
+      font-size: 16px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 64px;
+      text-align: center;
+    }
+
+    .real-result {
+      color: #eee;
+      font-family: monospace;
+    }
+  </style>
 </head>
 
 <body>
+  <div id="rcpWrap">
+  </div>
+  <div class="button-wrap">
+    <button onclick="setResult(this)" value="✌️" class="sessor">가위</button>
+    <button onclick="setResult(this)" value="✊" class="rock">바위</button>
+    <button onclick="setResult(this)" value="✋" class="paper">보</button>
+  </div>
+
+  <div class="result">
+
+  </div>
+  <!-- 요구사항
+:v::fist::raised_hand_with_fingers_splayed: 이모지가 순서대로 변하고 있는 화면을 만든다
+3개의 가위 바위 보 버튼이 있다.
+하나를 클릭하면 그때 화면에 있는 가위바위보가 멈추고 비교하여 이김, 비김, 짐을 표기한다. -->
 
 </body>
+<script>
+  const rcpWrap = document.getElementById('rcpWrap');
+  const button = document.querySelector('button');
+  const result = document.querySelector('.result');
+  let clickedValue;
+
+  const emojis = ['✊', '✌️', '✋'];
+  let values = 0;
+  function setResult(e) {
+    clickedValue = e.value;
+    clearInterval(animation)
+    if (emojis[values] === clickedValue) {
+      result.innerHTML = `<p class="real-result">비겼습니다</p>`
+    } else if ((emojis[values] === '✊' && clickedValue === '✌️') || (emojis[values] === '✋' && clickedValue === '✊') || (emojis[values] === '✌️' && clickedValue === '✋')) {
+      result.innerHTML = `<p class="real-result">졌습니다</p>`
+    } else {
+      result.innerHTML = `<p class="real-result">이겼습니다</p>`
+    }
+  }
+  const animation = setInterval(() => {
+    values++
+    if (values > 2) {
+      values = 0
+    }
+    rcpWrap.innerHTML = `<p>${emojis[values]}</p>`
+
+
+  }, 300)
+
+
+</script>
 
 </html>
