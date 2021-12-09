@@ -1,2 +1,55 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600&display=swap");
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(153, 81, 221);
+  font-family: "Baloo Bhaijaan 2", cursive;
+}
+
+header h1 {
+  margin-bottom: 10rem;
+  font-size: 10rem;
+  color: azure;
+}
+
+#list-game {
+  font-size: 15rem;
+}
+
+.list-choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.list-choices button {
+  width: 30rem;
+  height: 10rem;
+  border: none;
+  border-radius: 5rem;
+  font-size: 3rem;
+  margin-right: 3rem;
+  cursor: pointer;
+  background-color: rgb(214, 250, 86);
+}
+
+.retry {
+  width: 5rem;
+  cursor: pointer;
+}
+
+.result p {
+  margin-top: 3rem;
+  font-size: 5rem;
+  color: rgb(255, 203, 126);
 }
