@@ -33,6 +33,18 @@
       color: #eee;
       font-family: monospace;
     }
+
+    .btn-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn-reset {
+      width: 200px;
+      height: 30px;
+    }
   </style>
 </head>
 
@@ -45,7 +57,7 @@
     <button onclick="setResult(this)" value="✋" class="paper">보</button>
   </div>
 
-  <div class="result">
+  <div id="result">
 
   </div>
   <!-- 요구사항
@@ -57,30 +69,37 @@
 <script>
   const rcpWrap = document.getElementById('rcpWrap');
   const button = document.querySelector('button');
-  const result = document.querySelector('.result');
+  const result = document.getElementById('result');
   let clickedValue;
 
   const emojis = ['✊', '✌️', '✋'];
   let values = 0;
+  
+  rcpWrap.innerHTML = `<p>${emojis[values]}</p>`
+
+  function reset(){
+    location.reload()
+  }
+
   function setResult(e) {
     clickedValue = e.value;
     clearInterval(animation)
     if (emojis[values] === clickedValue) {
-      result.innerHTML = `<p class="real-result">비겼습니다</p>`
+      result.innerHTML = `<p class="real-result">비겼습니다</p><div class="btn-wrap"><button class="btn-reset" onclick="reset()">다시하기</button></div>`
     } else if ((emojis[values] === '✊' && clickedValue === '✌️') || (emojis[values] === '✋' && clickedValue === '✊') || (emojis[values] === '✌️' && clickedValue === '✋')) {
-      result.innerHTML = `<p class="real-result">졌습니다</p>`
+      result.innerHTML = `<p class="real-result">졌습니다</p><div class="btn-wrap"><button class="btn-reset" onclick="reset()">다시하기</button></div>`
     } else {
-      result.innerHTML = `<p class="real-result">이겼습니다</p>`
+      result.innerHTML = `<p class="real-result">이겼습니다</p><div class="btn-wrap"><button class="btn-reset" onclick="reset()">다시하기</button></div>`
     }
+
   }
+
   const animation = setInterval(() => {
     values++
     if (values > 2) {
       values = 0
     }
     rcpWrap.innerHTML = `<p>${emojis[values]}</p>`
-
-
   }, 300)
 
 
