@@ -1,0 +1,18 @@
+.userInfo{
+    display: inline-block;
+    width: 200px;
+    font-family: "HSYuji";
+}
+
+.gamer{
+    color: antiquewhite;
+}
+
+.player{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.score{
+    font-size: 80px;
+}
