@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'HSYuji';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSYuji-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1{
+    position: relative;
+    font-family: "HSYuji";
+    font-size: 48px;
+}
+.gameName{
+    text-decoration:wavy underline red;
+}
+.gamerValue{
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgb(238, 234, 222);
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3),
+                inset 3px 3px 5px 0 rgba(255, 255, 255, 0.3);
+    text-align: center;
+    line-height: 300px;
+    font-size: 180px;
+}

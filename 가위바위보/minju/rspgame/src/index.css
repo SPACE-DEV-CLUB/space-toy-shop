@@ -1,0 +1,11 @@
+body{
+    background-color: #ffce46;
+}
+#root{
+    display: block;
+    text-align: center;
+}
+
+#root>* {
+    margin: 30px;
+}
