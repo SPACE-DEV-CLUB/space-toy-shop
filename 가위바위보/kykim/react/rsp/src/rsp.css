@@ -1,0 +1,13 @@
+div {
+    text-align: center;
+    font-size: 80px;
+    padding: 20px;
+    margin-bottom: 100px;
+}
+button {
+    font-size: 80px;
+}
+.user {
+    display: flex;
+    justify-content: space-around;
+}
