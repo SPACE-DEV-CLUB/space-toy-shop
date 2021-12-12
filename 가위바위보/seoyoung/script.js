@@ -1,8 +1,8 @@
 console.log("Start!");
 
 const pickArray = ['✌','✊','🖐'];
-const userPick = document.querySelector("#userpick");
-const computerPick = document.querySelector("#computerpick");
+const userPick = document.getElementById("userpick");
+const computerPick = document.getElementById("computerpick");
 const btnPick = document.querySelectorAll(".btn-pick");
 const btnReset = document.querySelector(".btn-reset");
 const result = document.querySelector(".result");
@@ -18,9 +18,9 @@ function randomPick() {
 let interVal = setInterval(randomPick, 200);
 
 //유저가 버튼 클릭 시 반복을 멈추고, 컴퓨터가 선택한 이모지 출력
-let userClick = function() {
+const userClick = function() {
     clearInterval(interVal);
-    let random = pickArray[Math.floor(Math.random() * pickArray.length)];
+    const random = pickArray[Math.floor(Math.random() * pickArray.length)];
     computerPick.innerText = `${random}`;
 }
 
@@ -31,26 +31,25 @@ for(let i = 0; i < btnPick.length; i++) {
             click = false;
             userClick();
             userPick.innerText = this.textContent;
-            if (this.textContent == computerPick.innerText)
-            result.innerText = "DRAW";
-            else if (this.textContent == "✊" && computerPick.innerText == "✌")
-            {result.innerText = "WIN";
-            computerPick.classList.add("grayscale");}
-            else if (this.textContent == "✌" && computerPick.innerText == "🖐")
-            {result.innerText = "WIN";
-            computerPick.classList.add("grayscale");}
-            else if (this.textContent == "🖐" && computerPick.innerText == "✊")
-            {result.innerText = "WIN";
-            computerPick.classList.add("grayscale");}
-            else
-            {result.innerText = 'LOSE'
-            userPick.classList.add("grayscale");}
+            if (this.textContent == computerPick.innerText){
+                result.innerText = "DRAW";
+            } else if (
+                (this.textContent == "✊" && computerPick.innerText == "✌") ||
+                (this.textContent == "✌" && computerPick.innerText == "🖐") ||
+                (this.textContent == "🖐" && computerPick.innerText == "✊")
+            ){
+                result.innerText = "WIN";
+                computerPick.classList.add("grayscale");
+            } else
+            {
+                result.innerText = 'LOSE'
+                userPick.classList.add("grayscale");}
         }
     })
 }
 
 //리셋
-let resetGame = function(){
+const resetGame = function(){
     click = true;
     interVal = setInterval(randomPick, 200);
     computerPick.innerText = '🤖';
@@ -62,6 +61,5 @@ let resetGame = function(){
 btnReset.addEventListener('click', function() {
     if (!click) {
         resetGame();
-        console.log("Dddd");
     }
 })
