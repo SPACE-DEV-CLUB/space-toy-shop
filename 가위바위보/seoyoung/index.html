@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🖐가위바위보 게임</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
 </head>
-
 <body>
-
+    <h1 class="sr-only">가위바위보 게임</h1>
+    <button class="btn-reset">🔄</button>
+    <p class="result">HUMAN vs ROBOT</p>
+    <main>
+        <div class="pick-wrap">
+            <p id="userpick" class="pick"></p>
+            <p id="computerpick" class="pick">🤖</p>
+        </div>
+        <div class="btn-group">
+            <button type="button" id="btn-scissors" class="btn-pick">✌</button>
+            <button type="button" id="btn-rock" class="btn-pick">✊</button>
+            <button type="button" id="btn-paper" class="btn-pick">🖐</button>
+        </div>
+    </main>
 </body>
-
 </html>

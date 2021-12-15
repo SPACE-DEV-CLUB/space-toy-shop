@@ -1,2 +1,72 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #0066ee;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin: 40px 0;
+}
+
+.pick-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap:50px;
+}
+
+.pick {
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    border: 10px solid transparent;
+    background-color: #2bcb4e;
+    font-size: 80px;
+    border-radius: 30px;
+    text-align:center; 
+    line-height: 120px;
+}
+
+.pick.grayscale {
+    filter:grayscale(60%);
+}
+
+#computerpick {
+    background-color: #DE2862;
+}
+
+button {
+    cursor: pointer;
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    font-weight: 500;
+    border: 3px solid transparent;
+    border-radius: 30px;
+    background: #2bcb4e;
+    transition: all ease-in-out 0.2s;
+}
+
+.btn-pick:hover, .btn-reset:hover {
+    transform: translateY(-10px);
+    background: #02fa38;
+    font-size: 45px;
+}
+
+.btn-group {
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
 }
