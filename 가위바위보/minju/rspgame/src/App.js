@@ -42,10 +42,10 @@ class App extends React.Component{
       alert("비겼다.")
     }
     else if(this.state.show < 2){
-      this.state.show+1 ===  num ? this.lose() : this.win()
+      this.state.show+1 ===  num ? this.result("gamer") : this.result("user")
     }
     else{
-      num === 0 ? this.lose() : this.win();
+      num === 0 ? this.result("gamer") : this.result("user");
     }
     setTimeout(() => {
       this.restart()
@@ -65,20 +65,27 @@ class App extends React.Component{
     }, 100);
   }
 
-  win(){
-    alert("이겼다!!!!");
+  // win(){
+  //   alert("이겼다!!!!");
+  //   this.setState((prev) => {
+  //     return {user : prev.user + 1}
+  //   })
+
+  // }
+
+  // lose(){
+  //   alert("졌다!!!!!!!!");
+  //   this.setState((prev) => {
+  //     return {gamer : prev.gamer + 1}
+  //   })
+
+  // }
+
+  result(winner){
+    alert(winner === "gamer" ? "졌다!!!!!" : "이겼다!!!!")
     this.setState((prev) => {
-      return {user : prev.user + 1}
+      return {[winner] : prev[winner] + 1}
     })
-
-  }
-
-  lose(){
-    alert("졌다!!!!!!!!");
-    this.setState((prev) => {
-      return {gamer : prev.gamer + 1}
-    })
-
   }
 
   clear(){
