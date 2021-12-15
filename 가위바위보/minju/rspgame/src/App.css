@@ -9,6 +9,7 @@ h1{
     position: relative;
     font-family: "HSYuji";
     font-size: 48px;
+    word-break: keep-all;
 }
 .gameName{
     text-decoration:wavy underline red;
