@@ -1,6 +1,10 @@
 # SPACE TOY SHOP 🚀
 각자 부족한 언어를 학습하기 위해 같은 주제로 진행되는 토이프로젝트입니다. 프로젝트별 및 개인별 서로 다른 스택을 사용하고 있으므로, 자세한 스펙과 내용은 각 프로젝트에 작성된 **개인별 링크**를 참고해주세요.
 
+  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fjae04099%2Fspace-toy-shop&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+  <img src="https://img.shields.io/github/stars/jae04099/space-toy-shop" alt="stars"/>
+  <img src="https://img.shields.io/github/issues-pr/jae04099/space-toy-shop" alt="open pull requests"/>
+
 ## 프로젝트 주제
 토이프로젝트의 주제는 [다음 블로그](https://velog.io/@teo/2021-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B3%B5%EB%B6%80%EB%B2%95-%EC%9E%85%EB%AC%B8%EC%9E%90%ED%8E%B8-%EC%BB%A4%EB%A6%AC%ED%81%98%EB%9F%BC)를 참고하였습니다.
 목록을 클릭하시면 해당 설명으로 넘어가실 수 있습니다. 
@@ -155,3 +159,21 @@
 |[박정훈]()|
 |[김기영]()|
 |[이규리]()|
+
+<br/>
+
+## 👏 Contributing
+
+만약 미션 수행 중에 개선사항이 보인다면, 언제든 자유롭게 PR을 보내주세요.
+
+<br/>
+
+## 🐞 Bug Report
+
+버그를 발견한다면, [Issues](https://github.com/jae04099/space-toy-shop/issues)에 등록해주세요.
+
+<br/>
+
+## 📝 License
+
+This project is [MIT](https://github.com/jae04099/space-toy-shop/blob/main/LICENSE) licensed.
