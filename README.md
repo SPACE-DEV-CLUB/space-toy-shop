@@ -73,9 +73,9 @@
 |✔️ check here for detail!|
 |----|
 |[김민주](https://velog.io/@deli-ght/%EA%B0%80%EC%9C%84%EB%B0%94%EC%9C%84%EB%B3%B4-%EA%B2%8C%EC%9E%84-%EB%A7%8C%EB%93%A4%EA%B8%B0)|
-|[박서영]()|
+|[박서영](https://playing-rock-paper-scissors.vercel.app/)|
 |[박정훈](https://rock-scissors-paper-play.netlify.app/)|
-|[김기영]()|
+|[김기영](https://minigames-rockscissorspaper.netlify.app)|
 |[이규리]()|
 
 ## 2. 다른 글자 찾기 🔍
@@ -87,7 +87,7 @@
 
 |✔️ check here for detail!|
 |----|
-|[김민주](https://wdgame.netlify.app/)|
+|[김민주](https://velog.io/@deli-ght/%EB%8B%A4%EB%A5%B8-%EA%B8%80%EC%9E%90-%EC%B0%BE%EA%B8%B0)|
 |[박서영]()|
 |[박정훈]()|
 |[김기영]()|
