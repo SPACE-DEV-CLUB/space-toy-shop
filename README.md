@@ -5,12 +5,12 @@
 토이프로젝트의 주제는 [다음 블로그](https://velog.io/@teo/2021-%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B3%B5%EB%B6%80%EB%B2%95-%EC%9E%85%EB%AC%B8%EC%9E%90%ED%8E%B8-%EC%BB%A4%EB%A6%AC%ED%81%98%EB%9F%BC)를 참고하였습니다.
 목록을 클릭하시면 해당 설명으로 넘어가실 수 있습니다. 
 
-- [x] [가위바위보게임 ✌️](https://hackmd.io/djtJJ0-gQ5yh8LPqO2QmuA#2-%EB%8B%A4%EB%A5%B8-%EA%B8%80%EC%9E%90-%EC%B0%BE%EA%B8%B0-%F0%9F%94%8D)
-- [x] [다른글자찾기 🔍](https://hackmd.io/djtJJ0-gQ5yh8LPqO2QmuA#2-%EB%8B%A4%EB%A5%B8-%EA%B8%80%EC%9E%90-%EC%B0%BE%EA%B8%B0-%F0%9F%94%8D)
-- [ ] [짝맞추기 게임 👬](https://hackmd.io/djtJJ0-gQ5yh8LPqO2QmuA#3-%EC%A7%9D%EB%A7%9E%EC%B6%94%EA%B8%B0-%EA%B2%8C%EC%9E%84-%F0%9F%91%AC)
-- [ ] [메모리 게임 🧠](https://hackmd.io/djtJJ0-gQ5yh8LPqO2QmuA#4-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B2%8C%EC%9E%84-%F0%9F%A7%A0)
-- [ ] [퍼즐 스트라이크 🧩](https://hackmd.io/djtJJ0-gQ5yh8LPqO2QmuA#5-%ED%8D%BC%EC%A6%90-%EC%8A%A4%ED%8A%B8%EB%9D%BC%EC%9D%B4%ED%81%AC-%F0%9F%A7%A9)
-- [ ] [Todo 📝](https://hackmd.io/djtJJ0-gQ5yh8LPqO2QmuA#6-Todo-%F0%9F%93%9D)
+- [x] [가위바위보게임 ✌️](https://github.com/jae04099/space-toy-shop/tree/master#1-%EA%B0%80%EC%9C%84%EB%B0%94%EC%9C%84%EB%B3%B4-%EF%B8%8F)
+- [x] [다른글자찾기 🔍](https://github.com/jae04099/space-toy-shop#2-%EB%8B%A4%EB%A5%B8-%EA%B8%80%EC%9E%90-%EC%B0%BE%EA%B8%B0-)
+- [ ] [짝맞추기 게임 👬](https://github.com/jae04099/space-toy-shop#3-%EC%A7%9D%EB%A7%9E%EC%B6%94%EA%B8%B0-%EA%B2%8C%EC%9E%84-)
+- [ ] [메모리 게임 🧠](https://github.com/jae04099/space-toy-shop#4-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B2%8C%EC%9E%84-)
+- [ ] [퍼즐 스트라이크 🧩](https://github.com/jae04099/space-toy-shop#5-%ED%8D%BC%EC%A6%90-%EC%8A%A4%ED%8A%B8%EB%9D%BC%EC%9D%B4%ED%81%AC-)
+- [ ] [Todo 📝](https://github.com/jae04099/space-toy-shop#6-todo-)
 
 ## member
 
