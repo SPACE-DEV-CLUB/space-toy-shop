@@ -6,8 +6,8 @@ import Timer from "../components/Timer";
 const Board = (): JSX.Element => {
     const [stage, setStage] = useState(1);
     const [time, setTime] = useState(10);
-    const [isWin, setIsWin] = useState(false);
     const [isStart, setStart] = useState(false);
+    const [isWin, setIsWin] = useState(false);
 
     const tdArr: Array<Array<string>> = [
         ["p", "p", "p", "p", "p"],
@@ -22,9 +22,14 @@ const Board = (): JSX.Element => {
         return Math.floor(Math.random() * (max - min)) + min;
     };
 
-    // setInterval(() => {
-    //     setTime(parseInt(time) - 1)
-    // }, 1000)
+    useEffect(() => {
+        const timeoutID = setTimeout(() => {
+            setTime(time - 1);
+        }, 1000);
+        if (time <= 0) {
+            clearInterval(timeoutID);
+        }
+    }, [time]);
 
     function startGame() {
         setStart(true);
@@ -40,24 +45,25 @@ const Board = (): JSX.Element => {
         }
     }
 
-
     let firstRnd: number = makeRnd(0, 4);
     let secRnd: number = makeRnd(0, 4);
     tdArr[firstRnd][secRnd] = "q";
 
     return (
         <BoardContainer>
-            {/* <span className="timer">Time: {time}</span> */}
-            <h1>
-                stage: <br />
-                {stage}
-            </h1>
             {isStart ? (
-                <div onClick={getLetter} className="main-board">
-                    {tdArr.map((e, index) =>
-                        e.map((e, index) => <span key={index}>{e}</span>)
-                    )}
-                </div>
+                <>
+                    <span className="timer">Time: {time}</span>
+                    <h1>
+                        stage: <br />
+                        {stage}
+                    </h1>
+                    <div onClick={getLetter} className="main-board">
+                        {tdArr.map((e, index) =>
+                            e.map((e, index) => <span key={index}>{e}</span>)
+                        )}
+                    </div>
+                </>
             ) : (
                 <button onClick={startGame}>Start</button>
             )}
