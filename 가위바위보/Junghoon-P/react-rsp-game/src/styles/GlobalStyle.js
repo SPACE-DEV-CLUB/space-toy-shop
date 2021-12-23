@@ -29,6 +29,7 @@ footer, header, hgroup, menu, nav, section {
 
 * {
   box-sizing: border-box;
+  font-size: 10px;
   font-family: 'Noto Sans KR', sans-serif;
 }
 
