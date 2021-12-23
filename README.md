@@ -114,6 +114,7 @@
 
 ## 4. 메모리 게임 🧠
 ### 기본기능
+
 - 3x3 타일에 랜덤하게 하나를 골라 표기하고 다시 돌아옵니다.
 - 사용자는 그 순서를 기억하고 순서대로 클릭합니다.
 - 순서대로 다 맞았다면 하나씩 추가해서 반복합니다.
@@ -177,3 +178,4 @@
 ## 📝 License
 
 This project is [MIT](https://github.com/jae04099/space-toy-shop/blob/main/LICENSE) licensed.
+
