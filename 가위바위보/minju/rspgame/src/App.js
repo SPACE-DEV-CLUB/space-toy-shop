@@ -28,7 +28,7 @@ export default function App() {
     showValues = setInterval(() => {
       let newValue = show === 0 ? 1 : show === 1 ? 2 : show === 2 && 0
       setShow(newValue)
-    }, 500)
+    }, 100)
   }
 
   const clear = () => {
@@ -42,7 +42,6 @@ export default function App() {
   }
 
   const checkResult = (num) => {
-    clearInterval(showValues)
     if (show === num) {
       alert("비겼다.")
     } else if (show < 2) {
@@ -50,14 +49,10 @@ export default function App() {
     } else {
       num === 0 ? result("gamer") : result("user")
     }
-    setTimeout(() => {
-      restart()
-    }, 500)
   }
 
   useEffect(() => {
     restart()
-
     return () => clearInterval(showValues)
   })
 
