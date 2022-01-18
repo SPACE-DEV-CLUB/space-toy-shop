@@ -80,7 +80,7 @@
 |[박서영](https://playing-rock-paper-scissors.vercel.app/)|
 |[박정훈](https://rock-scissors-paper-play.netlify.app/)|
 |[김기영](https://minigames-rockscissorspaper.netlify.app)|
-|[이규리]()|
+|[이규리](https://musing-swirles-bfd01e.netlify.app/)|
 
 ## 2. 다른 글자 찾기 🔍
 ### 기본기능
