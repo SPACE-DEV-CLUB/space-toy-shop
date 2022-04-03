@@ -106,7 +106,7 @@
 
 |✔️ check here for detail!|
 |----|
-|[김민주]()|
+|[김민주](https://delicate-alpaca-5416b8.netlify.app/)|
 |[박서영]()|
 |[박정훈]()|
 |[김기영]()|
