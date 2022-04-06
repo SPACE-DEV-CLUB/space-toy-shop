@@ -3,6 +3,7 @@ import Card from "./Card"
 import theme from "./theme"
 import GAMEDATA from "./constant/data"
 import { useMemo, useState, useEffect } from "react"
+import ModalPortal from "./Modal"
 
 export const CardContainer = () => {
   const MixedCardList = useMemo(() => MixedFruit(), [])
@@ -59,14 +60,12 @@ export const CardContainer = () => {
   return (
     <Container>
       {finished && (
-        <Modal>
-          <ModalBox>
-            <span>다시 시작하시겠습니까?</span>
-            <button type="button" onClick={handleFinished}>
-              다시 시작
-            </button>
-          </ModalBox>
-        </Modal>
+        <ModalPortal>
+          <span>다시 시작하시겠습니까?</span>
+          <button type="button" onClick={handleFinished}>
+            다시 시작
+          </button>
+        </ModalPortal>
       )}
       <GameStage>
         {MixedCardList.map((e, i) => (
@@ -97,43 +96,6 @@ const GameStage = styled.article`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 5px;
-`
-
-const Modal = styled.div`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #fff2;
-  z-index: 1000;
-`
-
-const ModalBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  height: 150px;
-  background-color: ${theme.BLACK};
-  border-radius: 30px;
-
-  & > span {
-    margin: 20px auto;
-    color: #fff;
-  }
-
-  & > button {
-    height: 50px;
-    background: ${theme.GREEN};
-    border: none;
-    border-radius: 20px;
-  }
 `
 
 function MixedFruit() {
