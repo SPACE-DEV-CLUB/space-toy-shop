@@ -1,16 +1,16 @@
 import styled from "styled-components"
+import { keyframes } from "styled-components"
 import theme from "./theme"
 
-export default function Card({ data, handleClick, handleCheck }) {
+export default function Card({ data, handleClick }) {
   const { id, item, status, idx } = data
 
   const handleCard = (idx) => {
-    handleClick(idx)
-    handleCheck(idx)
+    if (handleClick) handleClick(idx)
   }
 
   return (
-    <CardFrame onClick={() => handleCard(idx)}>
+    <CardFrame onClick={() => status || handleCard(idx)}>
       <CardPiece checked={status}>
         <CardFront />
         <CardBack>{item}</CardBack>
@@ -29,7 +29,7 @@ const CardPiece = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
-  transition: transform 1s;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
   ${({ checked }) => (checked ? `transform: rotateY(180deg)` : null)}
 `
