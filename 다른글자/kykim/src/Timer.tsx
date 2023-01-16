@@ -8,21 +8,17 @@ const Timer = () => {
   useEffect(() => {
     timer = setInterval(() => {
       setTime(prev => prev - 1);
-      // if (time === 95) clearInterval(timer);
     }, 100);
+
+    if (time === 0) clearInterval(timer);
+
     return () => clearInterval(timer);
-  }, []);
-
-  useEffect(() => {
-    if (time === 95) {
-      console.log(1);
-
-      clearInterval(timer);
-      console.log(2);
-    }
   }, [time]);
 
-  return <h4>남은 시간 : ${time}</h4>;
+  const formatTimeWithDot = (time: number) => {
+    return Math.floor(time / 10) + '.' + (time % 10);
+  };
+  return <h4>{`남은 시간 : ${formatTimeWithDot(time)}`}</h4>;
 };
 
 export default Timer;
