@@ -1,4 +1,5 @@
-import React from 'react';
+import styled from '@emotion/styled';
+import React, { memo } from 'react';
 import getBoard from './utils/getBoard';
 
 interface BoardProps {
@@ -19,16 +20,29 @@ const Board = ({ stage = 1, onCorrect = () => {}, onIncorrect = () => {} }: Boar
   return (
     <>
       {board.map((tileRow, indexA) => (
-        <div key={indexA}>
+        <Row key={indexA}>
           {tileRow.map((tile, indexB) => (
-            <li key={`${indexA}_${indexB}`} onClick={() => onClickTile(tile)}>
+            <Tile key={`${indexA}_${indexB}`} onClick={() => onClickTile(tile)}>
               {tile}
-            </li>
+            </Tile>
           ))}
-        </div>
+        </Row>
       ))}
     </>
   );
 };
 
-export default Board;
+const Row = styled.ul`
+  display: flex;
+  list-style: none;
+  margin: 0;
+`;
+const Tile = styled.li`
+  list-style: none;
+  padding: 10px 5px;
+  border: 1px solid #7f7f7f;
+  &:hover {
+    background-color: #7f7f7f;
+  }
+`;
+export default memo(Board);

@@ -2,11 +2,6 @@ import React, { useState } from 'react';
 import { act, fireEvent, render, renderHook } from '@testing-library/react';
 import Board from './Board';
 
-// jest.mock('react', () => ({
-//   ...jest.requireActual('react'),
-//   useState: jest.fn(),
-// }));
-
 describe('Board', () => {
   it('renders a word "계절"', () => {
     const { container } = render(<Board />);
